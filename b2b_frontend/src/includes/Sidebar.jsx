@@ -1,37 +1,21 @@
 import { Link, useLocation } from "react-router-dom";
 import { useState } from "react";
-import { MdChatBubble, MdHome, MdPerson, MdSettings, MdClose, MdGroup, MdGroupWork, MdImage, MdVideocam, MdVideoCall } from "react-icons/md";
-import Logo from '../assets/images/logo/growsoon.png';
+import { MdChatBubble, MdHome, MdPerson, MdSettings, MdClose, MdGroup, MdGroupWork, MdImage, MdVideocam, MdVideoCall,MdPersonAdd,MdHandshake,MdInsertChart } from "react-icons/md";
+import Logo from '../assets/images/logo/dslogo.png';
 
 const menu = [
   {
     title: "Main",
     items: [
       { icon: <MdHome size={20} />, label: "Home", to: "/" },
-      // { icon: <MdChatBubble size={20} />, label: "Chat", to: "/chat" },
       { icon: <MdPerson size={20} />, label: "Users", to: "/users" },
+      { icon: <MdGroupWork size={20} />, label: "TYFCB", to: "/tyfcb" },
+      { icon: <MdPersonAdd size={20} />, label: "Referral", to: "/referral" },
+      { icon: <MdHandshake size={20} />, label: "Face to Face", to: "/facetoface" },
+       { icon: <MdInsertChart  size={20} />, label: "Reports", to: "/report" },
     ],
   },
-  // {
-  //   title: "Gallery",
-  //   items: [
-  //     { icon: <MdImage size={20} />, label: "Images", to: "/image_gallery" },
-  //   ],
-  // },
-  // {
-  //   title: "Bulk Chats",
-  //   items: [
-  //     { icon: <MdGroup size={20} />, label: "Bulk Message", to: "/bulk_message" },
-  //     { icon: <MdGroupWork size={20} />, label: "Template Message", to: "/template_message" },
-  //   ]
-  // },
-  // {
-  //   title: "Account",
-  //   items: [
-  //     { icon: <MdPerson size={20} />, label: "Profile", to: "/profile" },
-  //     { icon: <MdSettings size={20} />, label: "Settings", to: "/settings" },
-  //   ],
-  // },
+  
 ];
 
 const Sidebar = ({ isSidebarOpen, closeSidebar, isSidebarExpanded }) => {
@@ -70,18 +54,18 @@ const Sidebar = ({ isSidebarOpen, closeSidebar, isSidebarExpanded }) => {
         onMouseLeave={() => setHovering(false)}
       >
         <div className="flex flex-col w-full">
-          {/* Logo Section */}
-          <div className="p-4 border-b border-gray-200 dark:border-gray-700">
-            <div className="font-bold text-xl text-gray-900 dark:text-white transition-all duration-300">
-              {/* <img
-                src={Logo}
-                alt="Logo"
-                className={`transition-all duration-300 rounded-lg hover:scale-105 ${
-                  isExpanded ? "w-full h-12 object-contain" : "w-12 h-12 object-cover"
-                }`}
-              /> */}
-            </div>
-          </div>
+  {/* Logo Section - Fixed */}
+  <div className="flex items-center justify-center h-24 py-2 border-b border-gray-200 dark:border-gray-700">
+    <img
+      src={Logo}
+      alt="Logo"
+      className={`transition-all duration-300 rounded-lg hover:scale-105 ${
+        isExpanded
+          ? "w-auto object-contain" // Expanded state - reduced from h-14 to h-8
+          : "w-auto object-contain" // Collapsed state - reduced from h-12 to h-7
+      }`}
+    />
+  </div>
 
           {/* Navigation Menu */}
           <div className="flex-1 overflow-y-auto">
@@ -124,7 +108,7 @@ const Sidebar = ({ isSidebarOpen, closeSidebar, isSidebarExpanded }) => {
             <div className={`text-center text-xs text-gray-500 dark:text-gray-400 transition-all duration-300 ${
               isExpanded ? "opacity-100" : "opacity-0"
             }`}>
-             <p>Developed By <a className="text-blue-400" target="_blank" href="https://growsooninfotech.com">GrowSoon Infotech</a></p>
+             <p>Developed By <a className="text-blue-400" target="_blank" href="https://dsinfotechnologies.com">B2B - DS DIGITAL MEDIA</a></p>
              <p>All Rights Reserved © 2025</p>
             </div>
           </div>
@@ -192,7 +176,7 @@ const Sidebar = ({ isSidebarOpen, closeSidebar, isSidebarExpanded }) => {
           {/* Mobile Footer */}
           <div className="p-4 border-t border-gray-200 dark:border-gray-700 bg-gradient-to-r from-gray-50 to-white dark:from-gray-800 dark:to-gray-700">
             <div className="text-center text-xs text-gray-500 dark:text-gray-400">
-              © 2025 GrowSoon Infotech
+              © 2025 B2B - DS DIGITAL MEDIA
             </div>
           </div>
         </div>

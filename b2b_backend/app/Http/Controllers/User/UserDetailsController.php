@@ -97,6 +97,7 @@ class UserDetailsController extends Controller
             'user_type' => $request->user_type,
             'active' => false,
             'password_sent' => 'N', // Default to not sent
+            'created_at' => now()
         ]);
 
         if ($request->filled('company_name') || 
@@ -114,6 +115,7 @@ class UserDetailsController extends Controller
                 'state' => $request->state,
                 'zip_code' => $request->zip_code,
                 'country_region' => $request->country_region,
+                'created_at' => now()
             ]);
 
             $user->company()->save($company);
@@ -141,6 +143,7 @@ class UserDetailsController extends Controller
             'personal_mobile' => $request->personal_mobile ?? $user->personal_mobile,
             'personal_email' => $request->personal_email ?? $user->personal_email,
             'user_type' => $request->user_type ?? $user->user_type,
+            'updated_at' => now()
         ]);
 
         $companyData = [
@@ -154,13 +157,14 @@ class UserDetailsController extends Controller
             'state' => $request->state ?? $user->company->state ?? null,
             'zip_code' => $request->zip_code ?? $user->company->zip_code ?? null,
             'country_region' => $request->country_region ?? $user->company->country_region ?? null,
+            'updated_at' => now()
         ];
 
         if ($user->company) {
             $user->company->update($companyData);
         } else if ($request->hasAny([
             'company_name', 'company_phone_number', 'company_url',
-            'address_1', 'address_2', 'address_3', 'city', 'state', 'zip_code', 'country_region'
+            'address_1', 'address_2', 'address_3', 'city', 'state', 'zip_code', 'country_region','updated_at'
         ])) {
             $user->company()->create($companyData);
         }

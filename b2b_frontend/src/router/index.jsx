@@ -10,8 +10,12 @@ import Chat from "../pages/Chat";
 import BulkMessage from "../pages/BulkMessage";
 import TemplateMessage from "../pages/TemplatesMessage";
 import Users from "../pages/Users";
+import Tyfcb from "../pages/Tyfcb";
+import Referral from "../pages/Referral";
+import FaceToFace from "../pages/FaceToFace";
+import Report from "../pages/Report";
 import ImageGallery from "../pages/ImageGallery";
-import ChangePassword from "../pages/ChangePassword"; // ✅ Add this import
+import ChangePassword from "../pages/ChangePassword"; 
 import { ProtectedRoute } from "../context/AuthContext";
 
 const router = createBrowserRouter(
@@ -29,20 +33,20 @@ const router = createBrowserRouter(
           element: <ProtectedRoute><Home /></ProtectedRoute>,
         },
         {
-          path: "chat",
-          element: <ProtectedRoute><Chat /></ProtectedRoute>,
+          path: "tyfcb",
+          element: <ProtectedRoute><Tyfcb /></ProtectedRoute>,
         },
         {
-          path: "profile",
-          element: <ProtectedRoute><Profile /></ProtectedRoute>,
+          path: "referral",
+          element: <ProtectedRoute><Referral /></ProtectedRoute>,
         },
         {
-          path: "settings",
-          element: <ProtectedRoute><Settings /></ProtectedRoute>,
+          path: "facetoface",
+          element: <ProtectedRoute><FaceToFace /></ProtectedRoute>,
         },
         {
-          path: "bulk_message",
-          element: <ProtectedRoute><BulkMessage /></ProtectedRoute>,
+          path: "report",
+          element: <ProtectedRoute><Report /></ProtectedRoute>,
         },
         {
           path: "template_message",

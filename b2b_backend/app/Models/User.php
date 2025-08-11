@@ -27,7 +27,9 @@ class User extends Authenticatable // ✅ Change this!
         'active',
         'user_type',
         'password_sent_status',
-        'password_reset_status'
+        'password_reset_status',
+        'created_at',
+        'updated_at'
     ];
 
     // ✅ If the table has no created_at / updated_at fields

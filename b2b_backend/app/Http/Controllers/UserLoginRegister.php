@@ -29,6 +29,7 @@ class UserLoginRegister extends Controller
                 'personal_mobile' => $request->personal_mobile,
                 'personal_email' => $request->personal_email,
                 'user_name' => $request->personal_email,
+                'created_at' => now()
             ]);
 
             // Create company
@@ -36,6 +37,7 @@ class UserLoginRegister extends Controller
                 'profile_id' => $user->profile_id,
                 'company_name' => $request->company_name,
                 'company_url' => $request->company_url ?? '',
+                'created_at' => now()
             ]);
 
             return response()->json([

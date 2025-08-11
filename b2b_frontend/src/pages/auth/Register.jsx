@@ -6,7 +6,7 @@ import {
   MdBusiness,
   MdLanguage
 } from "react-icons/md";
-import Logo from "../../assets/images/logo/growsoon.png";
+import Logo from "../../assets/images/logo/dslogo.png";
 import { toast } from "react-toastify";
 import { Navigate, useNavigate } from "react-router-dom";
 import { useAuth } from "../../context/AuthContext";
@@ -161,10 +161,8 @@ const Register = () => {
   return (
     <div className="min-h-screen flex items-center justify-center bg-gray-50 py-8 px-4 sm:px-6 lg:px-8">
       <div className="max-w-2xl w-full space-y-8">
-        {/* Logo */}
-        <div className="flex justify-center items-center">
-          {/* <img src={Logo} alt="Logo" className="w-56" /> */}
-        </div>
+        {/* Logo */} 
+       
 
         {/* ✅ SUCCESS MESSAGE INLINE */}
         {success && (
@@ -175,7 +173,10 @@ const Register = () => {
 
         {/* Form Start */}
         <form onSubmit={handleSubmit} className="space-y-6">
-          <div className="bg-white rounded-2xl shadow p-6 mb-4">
+          <div className="bg-white rounded-2xl shadow p-6 mb-6">
+             <div className="flex justify-center items-center h-24 mb-4">
+          <img src={Logo} alt="Logo" className="w-56" />
+        </div>
             <h2 className="text-lg font-semibold text-gray-700 mb-4 border-b pb-2">
               Personal Information
             </h2>

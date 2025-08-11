@@ -4,7 +4,7 @@ import Axios from "../../utils/axios";
 import { MdEmail, MdLock, MdPerson } from "react-icons/md";
 import { IoMdEyeOff } from "react-icons/io";
 import { IoEye } from "react-icons/io5";
-import Logo from "../../assets/images/logo/growsoon.png";
+import Logo from "../../assets/images/logo/dslogo.png";
 import { toast } from "react-toastify";
 import { Navigate, useNavigate } from "react-router-dom";
 import { authAPI } from "../../common/api";
@@ -107,8 +107,8 @@ const Login = () => {
         {/* Login Card */}
         <div className="bg-white rounded-2xl shadow-xl p-8 space-y-6">
           {/* Header */}
-          <div className="justify-center flex items-center">
-            {/* <img src={Logo} alt="Logo" className="w-56" /> */}
+          <div className="justify-center flex items-center h-24">
+            <img src={Logo} alt="Logo" className="w-56" />
           </div>
 
           {/* Error Message */}

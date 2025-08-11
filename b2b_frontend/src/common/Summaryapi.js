@@ -85,6 +85,103 @@ changePassword: {
     url: '/change-password',
     method: 'POST'
 },
+
+// ... existing code ...
+
+// TYFCB endpoints
+tyfcb_list: {
+  url: '/tyfcb',
+  method: 'GET',
+},
+tyfcb_create: {
+  url: '/tyfcb',
+  method: 'POST',
+},
+tyfcb_get: (id) => ({
+  url: `/tyfcb/${id}`,
+  method: 'GET',
+}),
+tyfcb_update: (id) => ({
+  url: `/tyfcb/${id}`,
+  method: 'PUT',
+}),
+tyfcb_delete: (id) => ({
+  url: `/tyfcb/${id}`,
+  method: 'DELETE',
+}),
+tyfcb_users: {
+  url: '/tyfcb-users',
+  method: 'GET',
+},
+
+// Referral endpoints
+referral_list: {
+  url: '/referral',
+  method: 'GET',
+},
+referral_create: {
+  url: '/referral',
+  method: 'POST',
+},
+referral_get: (id) => ({
+  url: `/referral/${id}`,
+  method: 'GET',
+}),
+referral_update: (id) => ({
+  url: `/referral/${id}`,
+  method: 'PUT',
+}),
+referral_delete: (id) => ({
+  url: `/referral/${id}`,
+  method: 'DELETE',
+}),
+referral_users: {
+  url: '/referral-users',
+  method: 'GET',
+},
+
+// Face to Face endpoints
+face_to_face_list: {
+  url: '/face-to-face',
+  method: 'GET',
+},
+face_to_face_create: {
+  url: '/face-to-face',
+  method: 'POST',
+},
+face_to_face_get: (id) => ({
+  url: `/face-to-face/${id}`,
+  method: 'GET',
+}),
+face_to_face_update: (id) => ({
+  url: `/face-to-face/${id}`,
+  method: 'PUT',
+}),
+face_to_face_delete: (id) => ({
+  url: `/face-to-face/${id}`,
+  method: 'DELETE',
+}),
+face_to_face_users: {
+  url: '/face-to-face-users',
+  method: 'GET',
+},
+// Report endpoints
+report_generate: {
+  url: '/report',
+  method: 'GET',
+},
+report_export_pdf: {
+  url: '/report/export-pdf',
+  method: 'GET',
+},
+report_export_csv: {
+  url: '/report/export-csv',
+  method: 'GET',
+},
+report_users: {
+  url: '/report/users-list',
+  method: 'GET',
+},
 }
 
 export default SummaryApi

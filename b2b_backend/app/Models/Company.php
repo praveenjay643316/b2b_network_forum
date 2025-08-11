@@ -20,7 +20,9 @@ class Company extends Model
         'city',
         'state',
         'zip_code',
-        'country_region'
+        'country_region',
+        'created_at',
+        'updated_at'
     ];
 
     public $timestamps = false;
